@@ -1,4 +1,6 @@
 import React from 'react';
+import tree from '../treeicon.png';
+import handshake from '../handshake.png';
 
 const exports = {};
 
@@ -8,7 +10,9 @@ exports.Wrapper = class extends React.Component {
     return (
       <div className="App">
         <header className="App-header" id="root">
-          <h1>ShareTree</h1>
+          <div class="header">
+            <h1>ShareTree</h1>
+          </div>
           {content}
         </header>
       </div>
@@ -57,21 +61,21 @@ exports.DeployerOrAttacher = class extends React.Component {
   render() {
     const {parent} = this.props;
     return (
-      <div>
-        Please select a action:
-        <br />
-        <p>
+      <div id="mainParentDiv">
+        <div id="plantTree">
+          <img className="icon-img" src={tree}></img><br/>
           <button
             onClick={() => parent.selectDeployer()}
           >Plant Tree</button>
-          <br /> No Space?  Purchase a tree to plant
-        </p>
-        <p>
+          <br /><br /> No Space?  Purchase a tree to plant
+        </div>
+        <div id="confirmOffer">
+          <img className="icon-img" src={handshake}></img><br/>
           <button
             onClick={() => parent.selectAttacher()}
           >Confirm Offer</button>
-          <br />Check offers to plant tree
-        </p>
+          <br /><br />Check offers to plant tree
+        </div>  
       </div>
     );
   }

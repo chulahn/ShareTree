@@ -4,6 +4,7 @@ import Image from "../1.jpeg";
 import Image2 from "../2.jpeg";
 import Image3 from "../3.jpeg";
 import "../index.css";
+import star from "../star.png";
 
 const exports = {...PlayerViews};
 
@@ -14,11 +15,11 @@ exports.Wrapper = class extends React.Component {
     const {content} = this.props;
     return (
       <div className="Deployer">
-        <h2>Plant a Tree In</h2>
-        <h2>2 oak trees for Portland</h2>
-        4.9 Stars, Superhost. Marlborough, Massachusetts
-        <img className="image1" src={Image}></img>
+        <h2 id="plantTop">Plant a Tree In</h2>
+        <h3>2 Oak trees for Portland</h3>
+        4.9 <img id="star" src={star}></img>, Superhost.&nbsp;&nbsp;&nbsp;Marlborough, Massachusetts<br/>
         <img className="image2" src={Image2}></img>
+        <img className="image1" src={Image}></img>
         <img className="image3" src={Image3}></img>
         {content}
       </div>
@@ -32,13 +33,14 @@ exports.SetWager = class extends React.Component {
     const wager = (this.state || {}).wager || defaultWager;
     return (
       <div className="treeAgreement">
-        Quantity: <input
+        
+          Type: English Oak<br/>
+          Offer: USD 250 + 15% C02 Credit<br/>
+          Price in Crypto: <input
           type='number'
           placeholder={defaultWager}
           onChange={(e) => this.setState({wager: e.currentTarget.value})}
         /> {standardUnit}<br/>
-          Type: English Oak<br/>
-          Offer: USD 250 + 15% C02 Credit<br/>
         <button
           onClick={() => parent.setWager(wager)}
         >Donate Tree / Set wager</button>
