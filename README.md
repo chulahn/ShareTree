@@ -1,3 +1,3 @@
-# Reach-Morra
+# ShareTree
 
-This repo is dedicated to Morra built with Reach. I'll be hosting various versions....this one is the Starsky and Hutch version.
+An incentivized way to make the Earth greener with Carbon Credits.
