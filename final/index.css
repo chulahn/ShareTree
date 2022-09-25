@@ -116,3 +116,8 @@ body {
   #star {
     max-height: 20px;
   }
+
+  .logo {
+    padding-top: 25px;    
+    max-height: 90px;
+  }

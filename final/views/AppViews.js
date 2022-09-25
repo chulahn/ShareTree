@@ -1,6 +1,7 @@
 import React from 'react';
 import tree from '../treeicon.png';
 import handshake from '../handshake.png';
+import logo from '../logo.png';
 
 const exports = {};
 
@@ -11,7 +12,7 @@ exports.Wrapper = class extends React.Component {
       <div className="App">
         <header className="App-header" id="root">
           <div class="header">
-            <h1>ShareTree</h1>
+            <img className="logo" src={logo}/>
           </div>
           {content}
         </header>
