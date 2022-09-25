@@ -3,7 +3,7 @@ import React from 'react';
 const exports = {};
 
 // Player views must be extended.
-// It does not have its own Wrapper view.
+// It does not have its own ~ view.
 
 exports.GetHand = class extends React.Component {
   render() {

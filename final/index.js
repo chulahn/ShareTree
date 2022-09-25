@@ -58,6 +58,13 @@ class Player extends React.Component {
         this.setState({view: 'WaitingForResults', hand});
         return hand;
     }
+    async getHand2() {
+        const hand = await new Promise(resolveHandP => {
+            this.setState({view: 'GetHand2', playable: true, resolveHandP});
+        });
+        this.setState({view: 'WaitingForResults', hand});
+        return hand;
+    }
     async getGuess() {
         const guess = await new Promise(resolveGuessP => {
             this.setState({view: 'GetGuess', playable: true, resolveGuessP});
@@ -75,7 +82,7 @@ class Player extends React.Component {
 class Deployer extends Player {
     constructor(props) {
         super(props);
-        this.state = {view: 'SetWager'};
+        this.state = {view: 'SetWager2'};
     }
     setWager(wager) {this.setState({view: 'Deploy', wager});}
     async deploy() {

@@ -11,8 +11,8 @@ exports.Wrapper = class extends React.Component {
     return (
       <div className="App">
         <header className="App-header" id="root">
-          <div class="header">
-            <img className="logo" src={logo}/>
+          <div className="header">
+            <a href="/"><img className="logo" src={logo}/></a>
           </div>
           {content}
         </header>

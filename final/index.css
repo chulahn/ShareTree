@@ -121,3 +121,7 @@ body {
     padding-top: 25px;    
     max-height: 90px;
   }
+  #treeInfo {
+    margin-top: 0px;
+    padding-bottom: 0px;
+  }

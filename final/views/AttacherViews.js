@@ -54,8 +54,8 @@ exports.AcceptTerms = class extends React.Component {
     const {disabled} = this.state || {};
     return (
       <div>
-        The terms of the game are:
-        <br /> Wager: {wager} {standardUnit}
+        The terms of the contract are:
+        <br /> Price: {wager} {standardUnit}
         <br />
         <button
           disabled={disabled}
@@ -63,7 +63,7 @@ exports.AcceptTerms = class extends React.Component {
             this.setState({disabled: true, wager});
             parent.termsAccepted();
           }}
-        >Accept terms and pay wager</button>
+        >Accept terms</button>
       </div>
     );
   }
