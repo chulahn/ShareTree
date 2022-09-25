@@ -30,16 +30,29 @@ exports.Wrapper2 = class extends React.Component {
 }
 
 exports.Wrapper = class extends React.Component {
+
+  
   render() {
     const {content} = this.props;
+    var ab = Math.floor(Math.random() * 2);
+
+    // ab =
     return (
       <div className="Deployer">
-        <h2 id="plantTop">Plant a Tree In</h2>
+
+      { ab == 1 ? <div><h2 id="plantTop">Plant a Tree In</h2>
         <div id="treeInfo">4.6 <img id="star" src={star}></img>, Superhost.&nbsp;&nbsp;&nbsp;Lancaster, Pennsylvania</div><br/>
         <img className="image1" src={lan2}></img>
         <img className="image2" src={lan}></img>
         <img className="image3" src={lan3}></img>
+        {content}</div> : <div> <h2 id="plantTop">Plant a Tree In</h2>
+        <div id="treeInfo">4.9 <img id="star" src={star}></img>, Superhost.&nbsp;&nbsp;&nbsp;Marlborough, Massachusetts</div><br/>
+        <img className="image2" src={Image2}></img>
+        <img className="image1" src={Image}></img>
+        <img className="image3" src={Image3}></img>
         {content}
+      </div>
+      }  
       </div>
     );
   }
